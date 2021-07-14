@@ -14,5 +14,11 @@ RSpec.describe User do
 
       expect(user_1.name).to eq("Sal")
     end
+
+    it 'has an empty joke array' do
+      user_1 = User.new("Sal")
+
+      expect(user.jokes).to eq([])
+    end
   end
 end
