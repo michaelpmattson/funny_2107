@@ -1,5 +1,7 @@
 class OpenMic
-  def initialize(hash)
+  attr_reader :location
 
+  def initialize(details)
+    @location = details[:location]
   end
 end
