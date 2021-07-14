@@ -56,4 +56,19 @@ RSpec.describe User do
       expect(user_2.jokes).to eq([joke_1, joke_2])
     end
   end
+
+  context '#joke_by_id' do
+    it 'returns a joke by id' do
+      user_1 = User.new("Sal")
+
+      joke_1 = Joke.new(22, "Why did the strawberry cross the road?", "Because his mother was in a jam.")
+      joke_2 = Joke.new(13, "How do you keep a lion from charging?", "Take away its credit cards.")
+
+      expect(user_1.joke_by_id(22)).to eq(nil)
+
+      user_1.learn(joke_1)
+
+      expect(user_1.joke_by_id(22)).to eq(joke_1)
+    end
+  end
 end
