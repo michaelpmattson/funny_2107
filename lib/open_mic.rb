@@ -1,9 +1,11 @@
 class OpenMic
   attr_reader :location,
-              :date
+              :date,
+              :performers
 
   def initialize(details)
-    @location = details[:location]
-    @date     = details[:date]
+    @location   = details[:location]
+    @date       = details[:date]
+    @performers = []
   end
 end
