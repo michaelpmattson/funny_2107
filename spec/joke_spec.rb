@@ -8,7 +8,7 @@ RSpec.describe Joke do
       expect(joke).to be_instance_of(Joke)
     end
 
-    xit 'has an id' do
+    it 'has an id' do
       joke = Joke.new(22, "Why did the strawberry cross the road?", "Because his mother was in a jam.")
 
       expect(joke.id).to be(22)
