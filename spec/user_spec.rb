@@ -33,7 +33,7 @@ RSpec.describe User do
       user_1.learn(joke_1)
       user_1.learn(joke_2)
 
-      expect(user_1.jokes).to eq([joke1, joke_2])
+      expect(user_1.jokes).to eq([joke_1, joke_2])
     end
   end
 end
