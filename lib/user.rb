@@ -14,4 +14,8 @@ class User
   def tell(user, joke)
     user.learn(joke)
   end
+
+  def joke_by_id(id)
+    @jokes.find { |joke| joke.id == id }
+  end
 end
