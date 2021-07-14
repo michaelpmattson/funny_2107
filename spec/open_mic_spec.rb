@@ -21,5 +21,11 @@ RSpec.describe OpenMic do
 
       expect(open_mic.date).to eq("11-20-18")
     end
+
+    it 'has an empty performers array' do
+      open_mic = OpenMic.new({location: "Comedy Works", date: "11-20-18"})
+
+      expect(open_mic.performers).to eq([])
+    end
   end
 end
