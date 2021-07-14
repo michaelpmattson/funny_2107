@@ -8,5 +8,11 @@ RSpec.describe User do
 
       expect(user_1).to be_instance_of(User)
     end
+
+    it 'has a name' do
+      user_1 = User.new("Sal")
+
+      expect(user_1.name).to eq("Sal")
+    end
   end
 end
